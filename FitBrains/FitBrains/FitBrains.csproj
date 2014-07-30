@@ -189,6 +189,7 @@
     <Content Include="Fit Brains_files\fbds.js" />
     <Content Include="Fit Brains_files\i.js" />
     <Content Include="Fit Brains_files\jquery.js.pagespeed.jm.tlzeXThkrZ.js" />
+    <Content Include="Fit Brains_files\logo.png" />
     <Content Include="Fit Brains_files\main.css" />
     <Content Include="Fit Brains_files\main.js" />
     <Content Include="Fit Brains_files\satellite-5372b6b1a53a746c13000609.js" />
@@ -197,6 +198,7 @@
     <Content Include="Fit Brains_files\xbest_health.png.pagespeed.ic.r9H827Yzpb.png" />
     <Content Include="Fit Brains_files\xfb.png.pagespeed.ic.OhWELchm9A.png" />
     <Content Include="Fit Brains_files\xfitbrains-rosetta-light-yellow.png.pagespeed.ic.99VwnR6BZy.png" />
+    <Content Include="Fit Brains_files\xfitbrains-rosetta-light-yellow.png.pagespeed.ic.99VwnR6BZy1.png" />
     <Content Include="Fit Brains_files\xgame_preview.png.pagespeed.ic.pmLtwNKAnP.png" />
     <Content Include="Fit Brains_files\xipad_training.png.pagespeed.ic.mogf2IPqmZ.png" />
     <Content Include="Fit Brains_files\xipad_training2.png.pagespeed.ic.risQakpFzt.png" />
@@ -216,6 +218,8 @@
     <Content Include="Fit Brains_files\pixel" />
     <Content Include="Fit Brains_files\saved_resource" />
     <Content Include="Fit Brains_files\spp.pl" />
+    <None Include="Properties\PublishProfiles\ruicheng - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\ruicheng - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
