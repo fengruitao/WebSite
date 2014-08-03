@@ -9,12 +9,23 @@ namespace FitBrains.Controllers
     public class HomeController : Controller
     {
         #region 页面加载
+
+        public ActionResult ClientCase()
+        {
+            return View();
+        }
+
+        public ActionResult WeiXinService() 
+        {
+            return View();
+        }
+
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult WhyFitBrains()
+        public ActionResult ProductSoution()
         {
             return View();
         }
