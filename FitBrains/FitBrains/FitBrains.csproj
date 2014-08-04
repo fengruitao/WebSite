@@ -229,7 +229,6 @@
     <Content Include="followbutton_data\followButton.css" />
     <Content Include="followbutton_data\followButton.js" />
     <Content Include="followbutton_data\sso.js" />
-    <Content Include="followbutton_data\suda.js" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Fit Brains_files\pixel" />
