@@ -1,0 +1,37 @@
+﻿#main {
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+}
+/*---------产品---------*/
+.pro1,.pro2,.pro3 {
+	width: 240px;
+	padding-top: 48px;
+	text-align: center;
+}
+.pro1 h2,.pro2 h2,.pro3 h2 {
+	font-family: "微软雅黑";
+	font-size: 18px;
+	padding-top: 30px;
+}
+.pro1 p,.pro2 p,.pro3 p {
+	padding-top: 16px;
+}
+.pro1 {
+	float: left;
+}
+.pro2 {
+	margin-right: auto;
+	margin-left: auto;
+}
+.pro3 {
+	float: right;
+}
+/*---------link---------*/
+a {
+	color: #264473;
+	text-decoration: none;
+}
+a:hover {
+	color:#c0392b;
+}

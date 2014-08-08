@@ -10,21 +10,55 @@ namespace FitBrains.Controllers
     {
         #region 页面加载
 
+        /// <summary>
+        /// CooperationPartner页面加载
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult CooperationPartner()
+        {
+            return View();
+        }
+
+        /// <summary>
+        /// AboutUs页面加载
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult AboutUs()
+        {
+            return View();
+        }
+
+        /// <summary>
+        /// ClientCase页面加载
+        /// </summary>
+        /// <returns></returns>
         public ActionResult ClientCase()
         {
             return View();
         }
 
+        /// <summary>
+        /// WeiXinService页面加载
+        /// </summary>
+        /// <returns></returns>
         public ActionResult WeiXinService() 
         {
             return View();
         }
 
+        /// <summary>
+        /// Index页面加载
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Index()
         {
             return View();
         }
 
+        /// <summary>
+        /// ProductSoution页面加载
+        /// </summary>
+        /// <returns></returns>
         public ActionResult ProductSoution()
         {
             return View();

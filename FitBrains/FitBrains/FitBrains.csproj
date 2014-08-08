@@ -272,6 +272,8 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="Views\Home\ClientCase.cshtml" />
+    <Content Include="Views\Home\CooperationPartner.cshtml" />
+    <Content Include="Views\Home\AboutUs.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

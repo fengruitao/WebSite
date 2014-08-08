@@ -624,7 +624,8 @@ td, th {
 body {
     background-color: #182e37;
     font-size: 100%;
-    font-family: "klavika_rgregular",serif;
+    /*font-family: "klavika_rgregular",serif;*/
+    font-family: arial, helvetica, clean, sans-serif, "ËÎÌו";
     min-width: 1024px;
 }
 
