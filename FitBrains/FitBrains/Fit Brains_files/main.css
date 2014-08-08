@@ -988,7 +988,9 @@ input, select, option {
 }
 
     .header-container.home .window {
-        background: rgba(24,46,55,.75);
+        background-color:rgba(24,46,55,.75);
+        background-color:#244655 \9; /*IE8 */
+        filter:alpha(opacity=75);
         padding: 40px 60px 60px 60px;
         float: left;
         width: 560px;
@@ -1210,8 +1212,9 @@ input, select, option {
         .footer .links a {
             display: inline-block;
             float: left;
-            min-width: 150px;
+            /*min-width: 150px;*/
             margin-bottom: 20px;
+            margin-left:30px;
             text-decoration: none;
             color: #edf8ff;
             font-size: 16px;
