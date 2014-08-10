@@ -1,36 +1,254 @@
 ﻿<!DOCTYPE html>
 <!-- saved from url=(0039)http://www.fitbrains.com/why-fitbrains/ -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta charset="UTF-8"><script async="" src="~/Fit Brains_files/fbds.js"></script><script type="text/javascript" async="" src="~/Fit Brains_files/cf2786ed157c305a8f1daa858adcd15ce7bfdf60.1.js"></script><script type="text/javascript" async="" src="~/Fit Brains_files/i.js"></script><script async="" src="~/Fit Brains_files/analytics.js"></script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UQMAWVJSGwAHUFdTDgc="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e){function n(t,e,n){n||(n={});for(var r=o[t],a=r&&r.length||0,s=n[i]||(n[i]={}),u=0;a>u;u++)r[u].apply(s,e);return s}function r(t,e){var n=o[t]||(o[t]=[]);n.push(e)}var o={},i="nr@context";e.exports={on:r,emit:n}},{}],2:[function(t){function e(t,e,n,i,s){return u?u-=1:r("err",[s||new UncaughtException(t,e,n)]),"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t(5),a=window.onerror,s=!1,u=0;t("loader").features.push("err"),window.onerror=e,NREUM.noticeError=n;try{throw new Error}catch(d){"stack"in d&&(t(1),t(2),"addEventListener"in window&&t(3),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(4),s=!0)}i.on("fn-start",function(){s&&(u+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&u>0&&(u-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:5,2:4,3:3,4:6,5:1,6:14,handle:"D5DuLP",loader:"G9z0Bl"}],3:[function(t){function e(t){r.inPlace(t,["addEventListener","removeEventListener"],"-",n)}function n(t){return t[1]}var r=t(1),o=(t(3),t(2));if(e(window),"getPrototypeOf"in Object){for(var i=document;i&&!i.hasOwnProperty("addEventListener");)i=Object.getPrototypeOf(i);i&&e(i);for(var a=XMLHttpRequest.prototype;a&&!a.hasOwnProperty("addEventListener");)a=Object.getPrototypeOf(a);a&&e(a)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&e(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=e["nr@wrapped"]?t[1]=e["nr@wrapped"]:e["nr@wrapped"]=t[1]=r(e,"fn-"):"function"==typeof e.handleEvent&&r.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:15,2:1,3:14}],4:[function(t){var e=(t(3),t(1)),n=t(2);e.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=e(t[0],"fn-")})},{1:15,2:1,3:14}],5:[function(t){function e(t){var e=t[0];"string"==typeof e&&(e=new Function(e)),t[0]=n(e,"fn-")}var n=(t(3),t(1)),r=t(2);n.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",e)},{1:15,2:1,3:14}],6:[function(t){function e(){o.inPlace(this,s,"fn-")}function n(t,e){o.inPlace(e,["onreadystatechange"],"fn-")}function r(t,e){return e}var o=t(1),i=t(2),a=window.XMLHttpRequest,s=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];window.XMLHttpRequest=function(t){var n=new a(t);try{i.emit("new-xhr",[],n),o.inPlace(n,["addEventListener","removeEventListener"],"-",function(t,e){return e}),n.addEventListener("readystatechange",e,!1)}catch(r){try{i.emit("internal-error",r)}catch(s){}}return n},window.XMLHttpRequest.prototype=a.prototype,o.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",r),i.on("send-xhr-start",n),i.on("open-xhr-start",n)},{1:15,2:1}],7:[function(t){function e(){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;u>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,d="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,f=e(d);if(f&&(r.rxSize=f),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,o("xhr",[n,r])}}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}t("loader").features.push("xhr");var o=t("handle"),i=t(1),a=t(5),s=["load","error","abort","timeout"],u=s.length,d=t(2);t(3),t(4),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var d=e(o);d&&(r.txSize=d)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){try{a.emit("internal-error",e)}catch(r){}}};for(var f=0;u>f;f++)n.addEventListener(s[f],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+d(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+d(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&e()},{1:8,2:11,3:3,4:6,5:1,handle:"D5DuLP",loader:"G9z0Bl"}],8:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],D5DuLP:[function(t,e){function n(t,e){var n=r[t];return n?n.apply(this,e):(o[t]||(o[t]=[]),void o[t].push(e))}var r={},o={};e.exports=n,n.queues=o,n.handlers=r},{}],11:[function(t,e){function n(t){if(!t||"object"!=typeof t&&"function"!=typeof t)return-1;if(t===window)return 0;if(o.call(t,"__nr"))return t.__nr;try{return Object.defineProperty(t,"__nr",{value:r,writable:!0,enumerable:!1}),r}catch(e){return t.__nr=r,r}finally{r+=1}}var r=1,o=Object.prototype.hasOwnProperty;e.exports=n},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&u&&u.body){p.proto="https"===c.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=u.createElement("script");e.src=p.proto+t.agent,u.body.appendChild(e)}}function r(){"complete"===u.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=window,u=s.document,d="addEventListener",f="attachEvent",c=(""+location).split("?")[0],p=e.exports={offset:i(),origin:c,features:[]};u[d]?(u[d]("DOMContentLoaded",o,!1),s[d]("load",n,!1)):(u[f]("onreadystatechange",r),s[f]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}],14:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],15:[function(t,e){function n(t,e,r,s){function nrWrapper(){try{var n,a=u(arguments),d=this,f=r&&r(a,d)||{}}catch(c){i([c,"",[a,d,s],f])}o(e+"start",[a,d,s],f);try{return n=t.apply(d,a)}catch(p){throw o(e+"err",[a,d,p],f),p}finally{o(e+"end",[a,d,n],f)}}return a(t)?t:(e||(e=""),nrWrapper[n.flag]=!0,nrWrapper)}function r(t,e,r,o){r||(r="");var i,s,u,d="-"===r.charAt(0);for(u=0;u<e.length;u++)s=e[u],i=t[s],a(i)||(t[s]=n(i,d?s+r:r,o,s,t))}function o(t,e,n){try{s.emit(t,e,n)}catch(r){i([r,t,e,n])}}function i(t){try{s.emit("internal-error",t)}catch(e){}}function a(t){return!(t&&"function"==typeof t&&t.apply&&!t[n.flag])}var s=t(1),u=t(2);e.exports=n,n.inPlace=r,n.flag="nr@wrapper"},{1:1,2:14}]},{},["G9z0Bl",2,7]);</script>
-	<meta name="description" content="Brain Training for Web and Mobile">
-	<meta name="keywords" content="Fit Brains Trainer, Brain Training, Brain Games">
-	<meta name="viewport" content="width=device-width, user-scalable=no">
-	<meta name="viewport" content="minimal-ui">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <script async="" src="~/Fit Brains_files/fbds.js"></script>
+    <script type="text/javascript" async="" src="~/Fit Brains_files/cf2786ed157c305a8f1daa858adcd15ce7bfdf60.1.js"></script>
+    <script type="text/javascript" async="" src="~/Fit Brains_files/i.js"></script>
+    <script async="" src="~/Fit Brains_files/analytics.js"></script>
+    <script type="text/javascript">(window.NREUM || (NREUM = {})).loader_config = { xpid: "UQMAWVJSGwAHUFdTDgc=" }; window.NREUM || (NREUM = {}), __nr_require = function (t, e, n) { function r(n) { if (!e[n]) { var o = e[n] = { exports: {} }; t[n][0].call(o.exports, function (e) { var o = t[n][1][e]; return r(o ? o : e) }, o, o.exports) } return e[n].exports } if ("function" == typeof __nr_require) return __nr_require; for (var o = 0; o < n.length; o++) r(n[o]); return r }({ 1: [function (t, e) { function n(t, e, n) { n || (n = {}); for (var r = o[t], a = r && r.length || 0, s = n[i] || (n[i] = {}), u = 0; a > u; u++) r[u].apply(s, e); return s } function r(t, e) { var n = o[t] || (o[t] = []); n.push(e) } var o = {}, i = "nr@context"; e.exports = { on: r, emit: n } }, {}], 2: [function (t) { function e(t, e, n, i, s) { return u ? u -= 1 : r("err", [s || new UncaughtException(t, e, n)]), "function" == typeof a ? a.apply(this, o(arguments)) : !1 } function UncaughtException(t, e, n) { this.message = t || "Uncaught error with no additional information", this.sourceURL = e, this.line = n } function n(t) { r("err", [t, (new Date).getTime()]) } var r = t("handle"), o = t(6), i = t(5), a = window.onerror, s = !1, u = 0; t("loader").features.push("err"), window.onerror = e, NREUM.noticeError = n; try { throw new Error } catch (d) { "stack" in d && (t(1), t(2), "addEventListener" in window && t(3), window.XMLHttpRequest && XMLHttpRequest.prototype && XMLHttpRequest.prototype.addEventListener && t(4), s = !0) } i.on("fn-start", function () { s && (u += 1) }), i.on("fn-err", function (t, e, r) { s && (this.thrown = !0, n(r)) }), i.on("fn-end", function () { s && !this.thrown && u > 0 && (u -= 1) }), i.on("internal-error", function (t) { r("ierr", [t, (new Date).getTime(), !0]) }) }, { 1: 5, 2: 4, 3: 3, 4: 6, 5: 1, 6: 14, handle: "D5DuLP", loader: "G9z0Bl" }], 3: [function (t) { function e(t) { r.inPlace(t, ["addEventListener", "removeEventListener"], "-", n) } function n(t) { return t[1] } var r = t(1), o = (t(3), t(2)); if (e(window), "getPrototypeOf" in Object) { for (var i = document; i && !i.hasOwnProperty("addEventListener") ;) i = Object.getPrototypeOf(i); i && e(i); for (var a = XMLHttpRequest.prototype; a && !a.hasOwnProperty("addEventListener") ;) a = Object.getPrototypeOf(a); a && e(a) } else XMLHttpRequest.prototype.hasOwnProperty("addEventListener") && e(XMLHttpRequest.prototype); o.on("addEventListener-start", function (t) { if (t[1]) { var e = t[1]; "function" == typeof e ? this.wrapped = e["nr@wrapped"] ? t[1] = e["nr@wrapped"] : e["nr@wrapped"] = t[1] = r(e, "fn-") : "function" == typeof e.handleEvent && r.inPlace(e, ["handleEvent"], "fn-") } }), o.on("removeEventListener-start", function (t) { var e = this.wrapped; e && (t[1] = e) }) }, { 1: 15, 2: 1, 3: 14 }], 4: [function (t) { var e = (t(3), t(1)), n = t(2); e.inPlace(window, ["requestAnimationFrame", "mozRequestAnimationFrame", "webkitRequestAnimationFrame", "msRequestAnimationFrame"], "raf-"), n.on("raf-start", function (t) { t[0] = e(t[0], "fn-") }) }, { 1: 15, 2: 1, 3: 14 }], 5: [function (t) { function e(t) { var e = t[0]; "string" == typeof e && (e = new Function(e)), t[0] = n(e, "fn-") } var n = (t(3), t(1)), r = t(2); n.inPlace(window, ["setTimeout", "setInterval", "setImmediate"], "setTimer-"), r.on("setTimer-start", e) }, { 1: 15, 2: 1, 3: 14 }], 6: [function (t) { function e() { o.inPlace(this, s, "fn-") } function n(t, e) { o.inPlace(e, ["onreadystatechange"], "fn-") } function r(t, e) { return e } var o = t(1), i = t(2), a = window.XMLHttpRequest, s = ["onload", "onerror", "onabort", "onloadstart", "onloadend", "onprogress", "ontimeout"]; window.XMLHttpRequest = function (t) { var n = new a(t); try { i.emit("new-xhr", [], n), o.inPlace(n, ["addEventListener", "removeEventListener"], "-", function (t, e) { return e }), n.addEventListener("readystatechange", e, !1) } catch (r) { try { i.emit("internal-error", r) } catch (s) { } } return n }, window.XMLHttpRequest.prototype = a.prototype, o.inPlace(XMLHttpRequest.prototype, ["open", "send"], "-xhr-", r), i.on("send-xhr-start", n), i.on("open-xhr-start", n) }, { 1: 15, 2: 1 }], 7: [function (t) { function e() { function e(t) { if ("string" == typeof t && t.length) return t.length; if ("object" != typeof t) return void 0; if ("undefined" != typeof ArrayBuffer && t instanceof ArrayBuffer && t.byteLength) return t.byteLength; if ("undefined" != typeof Blob && t instanceof Blob && t.size) return t.size; if ("undefined" != typeof FormData && t instanceof FormData) return void 0; try { return JSON.stringify(t).length } catch (e) { return void 0 } } function n(t) { var n = this.params, r = this.metrics; if (!this.ended) { this.ended = !0; for (var i = 0; u > i; i++) t.removeEventListener(s[i], this.listener, !1); if (!n.aborted) { if (r.duration = (new Date).getTime() - this.startTime, 4 === t.readyState) { n.status = t.status; var a = t.responseType, d = "arraybuffer" === a || "blob" === a || "json" === a ? t.response : t.responseText, f = e(d); if (f && (r.rxSize = f), this.sameOrigin) { var c = t.getResponseHeader("X-NewRelic-App-Data"); c && (n.cat = c.split(", ").pop()) } } else n.status = 0; r.cbTime = this.cbTime, o("xhr", [n, r]) } } } function r(t, e) { var n = i(e), r = t.params; r.host = n.hostname + ":" + n.port, r.pathname = n.pathname, t.sameOrigin = n.sameOrigin } t("loader").features.push("xhr"); var o = t("handle"), i = t(1), a = t(5), s = ["load", "error", "abort", "timeout"], u = s.length, d = t(2); t(3), t(4), a.on("new-xhr", function () { this.totalCbs = 0, this.called = 0, this.cbTime = 0, this.end = n, this.ended = !1, this.xhrGuids = {} }), a.on("open-xhr-start", function (t) { this.params = { method: t[0] }, r(this, t[1]), this.metrics = {} }), a.on("open-xhr-end", function (t, e) { "loader_config" in NREUM && "xpid" in NREUM.loader_config && this.sameOrigin && e.setRequestHeader("X-NewRelic-ID", NREUM.loader_config.xpid) }), a.on("send-xhr-start", function (t, n) { var r = this.metrics, o = t[0], i = this; if (r && o) { var d = e(o); d && (r.txSize = d) } this.startTime = (new Date).getTime(), this.listener = function (t) { try { "abort" === t.type && (i.params.aborted = !0), ("load" !== t.type || i.called === i.totalCbs && (i.onloadCalled || "function" != typeof n.onload)) && i.end(n) } catch (e) { try { a.emit("internal-error", e) } catch (r) { } } }; for (var f = 0; u > f; f++) n.addEventListener(s[f], this.listener, !1) }), a.on("xhr-cb-time", function (t, e, n) { this.cbTime += t, e ? this.onloadCalled = !0 : this.called += 1, this.called !== this.totalCbs || !this.onloadCalled && "function" == typeof n.onload || this.end(n) }), a.on("xhr-load-added", function (t, e) { var n = "" + d(t) + !!e; this.xhrGuids && !this.xhrGuids[n] && (this.xhrGuids[n] = !0, this.totalCbs += 1) }), a.on("xhr-load-removed", function (t, e) { var n = "" + d(t) + !!e; this.xhrGuids && this.xhrGuids[n] && (delete this.xhrGuids[n], this.totalCbs -= 1) }), a.on("addEventListener-end", function (t, e) { e instanceof XMLHttpRequest && "load" === t[0] && a.emit("xhr-load-added", [t[1], t[2]], e) }), a.on("removeEventListener-end", function (t, e) { e instanceof XMLHttpRequest && "load" === t[0] && a.emit("xhr-load-removed", [t[1], t[2]], e) }), a.on("fn-start", function (t, e, n) { e instanceof XMLHttpRequest && ("onload" === n && (this.onload = !0), ("load" === (t[0] && t[0].type) || this.onload) && (this.xhrCbStart = (new Date).getTime())) }), a.on("fn-end", function (t, e) { this.xhrCbStart && a.emit("xhr-cb-time", [(new Date).getTime() - this.xhrCbStart, this.onload, e], e) }) } window.XMLHttpRequest && XMLHttpRequest.prototype && XMLHttpRequest.prototype.addEventListener && !/CriOS/.test(navigator.userAgent) && e() }, { 1: 8, 2: 11, 3: 3, 4: 6, 5: 1, handle: "D5DuLP", loader: "G9z0Bl" }], 8: [function (t, e) { e.exports = function (t) { var e = document.createElement("a"), n = window.location, r = {}; e.href = t, r.port = e.port; var o = e.href.split("://"); return !r.port && o[1] && (r.port = o[1].split("/")[0].split(":")[1]), r.port && "0" !== r.port || (r.port = "https" === o[0] ? "443" : "80"), r.hostname = e.hostname || n.hostname, r.pathname = e.pathname, "/" !== r.pathname.charAt(0) && (r.pathname = "/" + r.pathname), r.sameOrigin = !e.hostname || e.hostname === document.domain && e.port === n.port && e.protocol === n.protocol, r } }, {}], handle: [function (t, e) { e.exports = t("D5DuLP") }, {}], D5DuLP: [function (t, e) { function n(t, e) { var n = r[t]; return n ? n.apply(this, e) : (o[t] || (o[t] = []), void o[t].push(e)) } var r = {}, o = {}; e.exports = n, n.queues = o, n.handlers = r }, {}], 11: [function (t, e) { function n(t) { if (!t || "object" != typeof t && "function" != typeof t) return -1; if (t === window) return 0; if (o.call(t, "__nr")) return t.__nr; try { return Object.defineProperty(t, "__nr", { value: r, writable: !0, enumerable: !1 }), r } catch (e) { return t.__nr = r, r } finally { r += 1 } } var r = 1, o = Object.prototype.hasOwnProperty; e.exports = n }, {}], loader: [function (t, e) { e.exports = t("G9z0Bl") }, {}], G9z0Bl: [function (t, e) { function n() { var t = p.info = NREUM.info; if (t && t.agent && t.licenseKey && t.applicationID && u && u.body) { p.proto = "https" === c.split(":")[0] || t.sslForHttp ? "https://" : "http://", a("mark", ["onload", i()]); var e = u.createElement("script"); e.src = p.proto + t.agent, u.body.appendChild(e) } } function r() { "complete" === u.readyState && o() } function o() { a("mark", ["domContent", i()]) } function i() { return (new Date).getTime() } var a = t("handle"), s = window, u = s.document, d = "addEventListener", f = "attachEvent", c = ("" + location).split("?")[0], p = e.exports = { offset: i(), origin: c, features: [] }; u[d] ? (u[d]("DOMContentLoaded", o, !1), s[d]("load", n, !1)) : (u[f]("onreadystatechange", r), s[f]("onload", n)), a("mark", ["firstbyte", i()]) }, { handle: "D5DuLP" }], 14: [function (t, e) { function n(t, e, n) { e || (e = 0), "undefined" == typeof n && (n = t ? t.length : 0); for (var r = -1, o = n - e || 0, i = Array(0 > o ? 0 : o) ; ++r < o;) i[r] = t[e + r]; return i } e.exports = n }, {}], 15: [function (t, e) { function n(t, e, r, s) { function nrWrapper() { try { var n, a = u(arguments), d = this, f = r && r(a, d) || {} } catch (c) { i([c, "", [a, d, s], f]) } o(e + "start", [a, d, s], f); try { return n = t.apply(d, a) } catch (p) { throw o(e + "err", [a, d, p], f), p } finally { o(e + "end", [a, d, n], f) } } return a(t) ? t : (e || (e = ""), nrWrapper[n.flag] = !0, nrWrapper) } function r(t, e, r, o) { r || (r = ""); var i, s, u, d = "-" === r.charAt(0); for (u = 0; u < e.length; u++) s = e[u], i = t[s], a(i) || (t[s] = n(i, d ? s + r : r, o, s, t)) } function o(t, e, n) { try { s.emit(t, e, n) } catch (r) { i([r, t, e, n]) } } function i(t) { try { s.emit("internal-error", t) } catch (e) { } } function a(t) { return !(t && "function" == typeof t && t.apply && !t[n.flag]) } var s = t(1), u = t(2); e.exports = n, n.inPlace = r, n.flag = "nr@wrapper" }, { 1: 1, 2: 14 }] }, {}, ["G9z0Bl", 2, 7]);</script>
+    <meta name="description" content="Brain Training for Web and Mobile">
+    <meta name="keywords" content="Fit Brains Trainer, Brain Training, Brain Games">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="viewport" content="minimal-ui">
 
-	
-		
-	
-	
 
-	<title>Fit Brains</title>
 
-	<link rel="shortcut icon" href="http://www.fitbrains.com/favicon.ico">
 
-	
-		<link type="text/css" rel="stylesheet" href="~/Fit Brains_files/main.css">
-		
-		
-		
-		
-		
-		<style media="screen and (max-width:1280px)">.header .container{width:750px}.header.user .container{width:600px}.header.user .navigation-links{padding-left:40px}.navigation-links a{display:block;float:left;height:102px;min-width:103px;padding:0 8px;margin:0;text-decoration:none;text-align:center;color:#fff;font-family:"helvetica";font-size:16px}.navigation-links a.blog{padding:0 5px}.navigation-links a.start-training{width:142px;padding-right:0}</style>
-		<style>.button{display:inline-block;min-width:103px;padding:0 20px;height:50px;border-radius:8px;line-height:50px;vertical-align:middle;font-size:21px;font-weight:bold;color:#fff;text-align:center;cursor:pointer;border:none}.button.disabled{background:#bbb;cursor:default}.button.wide{padding:0 40px}.button.xwide{padding:0 60px}.button.tall{height:68px;line-height:72px}.button.full{padding:0;width:100%}.button.rounded{border-radius:25px}.button.square{border-radius:2px}.button.tall.rounded{border-radius:34px}.button *,.button a:hover,.button a:visited{color:#fff!important}a.button,.button a{text-decoration:none}.button.blue{background:#5086b2}.button.green{background:#86c543}.button.grey{background:#bbb}.button.yellow{background:#fcb410}.button.purple{background:#875ca9}.button.red{background:#f86d6a}.button.white{background:#fff;color:#3f90d1}.button.orange{background:#f1642b;color:#fff}.button.promo-orange{background:#fcb414;color:#fff}.button.blue:hover{background:#67ade6}.button.green:hover{background:#a8f754}.button.grey:hover{background:#ccc}.button.yellow:hover{background:#fccc60}.button.purple:hover{background:#af77db}.button.red:hover{background:#fb8885}.button.white:hover{background:#fff;color:#47a2eb}.button.orange:hover{background:#cf5625}.button.promo-orange:hover{background:#d49711}.button.blue:active{background:#396080}.button.green:active{background:#639131}.button.grey:active{background:#878787}.button.yellow:active{background:#ab7a0b}.button.purple:active{background:#5e4075}.button.red:active{background:#ab4b49}.button.white:active{background:#fff;color:#306d9e}.button.orange:active{background:#ff6a2e}.button.promo-orange:active{background:#fb0}.button:focus{outline:none}</style>
-	
-	
 
-	
-		<script src="~/Fit Brains_files/jquery.js.pagespeed.jm.tlzeXThkrZ.js"></script>
-		<script src="~/Fit Brains_files/main.js"></script>
+
+    <title>Fit Brains</title>
+
+    <link rel="shortcut icon" href="http://www.fitbrains.com/favicon.ico">
+
+
+    <link type="text/css" rel="stylesheet" href="~/Fit Brains_files/main.css">
+
+
+
+
+
+    <style media="screen and (max-width:1280px)">
+        .header .container {
+            width: 750px;
+        }
+
+        .header.user .container {
+            width: 600px;
+        }
+
+        .header.user .navigation-links {
+            padding-left: 40px;
+        }
+
+        .navigation-links a {
+            display: block;
+            float: left;
+            height: 102px;
+            min-width: 103px;
+            padding: 0 8px;
+            margin: 0;
+            text-decoration: none;
+            text-align: center;
+            color: #fff;
+            font-family: "helvetica";
+            font-size: 16px;
+        }
+
+            .navigation-links a.blog {
+                padding: 0 5px;
+            }
+
+            .navigation-links a.start-training {
+                width: 142px;
+                padding-right: 0;
+            }
+    </style>
+    <style>
+        .button {
+            display: inline-block;
+            min-width: 103px;
+            padding: 0 20px;
+            height: 50px;
+            border-radius: 8px;
+            line-height: 50px;
+            vertical-align: middle;
+            font-size: 21px;
+            font-weight: bold;
+            color: #fff;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+        }
+
+            .button.disabled {
+                background: #bbb;
+                cursor: default;
+            }
+
+            .button.wide {
+                padding: 0 40px;
+            }
+
+            .button.xwide {
+                padding: 0 60px;
+            }
+
+            .button.tall {
+                height: 68px;
+                line-height: 72px;
+            }
+
+            .button.full {
+                padding: 0;
+                width: 100%;
+            }
+
+            .button.rounded {
+                border-radius: 25px;
+            }
+
+            .button.square {
+                border-radius: 2px;
+            }
+
+            .button.tall.rounded {
+                border-radius: 34px;
+            }
+
+            .button *, .button a:hover, .button a:visited {
+                color: #fff!important;
+            }
+
+            a.button, .button a {
+                text-decoration: none;
+            }
+
+            .button.blue {
+                background: #5086b2;
+            }
+
+            .button.green {
+                background: #86c543;
+            }
+
+            .button.grey {
+                background: #bbb;
+            }
+
+            .button.yellow {
+                background: #fcb410;
+            }
+
+            .button.purple {
+                background: #875ca9;
+            }
+
+            .button.red {
+                background: #f86d6a;
+            }
+
+            .button.white {
+                background: #fff;
+                color: #3f90d1;
+            }
+
+            .button.orange {
+                background: #f1642b;
+                color: #fff;
+            }
+
+            .button.promo-orange {
+                background: #fcb414;
+                color: #fff;
+            }
+
+            .button.blue:hover {
+                background: #67ade6;
+            }
+
+            .button.green:hover {
+                background: #a8f754;
+            }
+
+            .button.grey:hover {
+                background: #ccc;
+            }
+
+            .button.yellow:hover {
+                background: #fccc60;
+            }
+
+            .button.purple:hover {
+                background: #af77db;
+            }
+
+            .button.red:hover {
+                background: #fb8885;
+            }
+
+            .button.white:hover {
+                background: #fff;
+                color: #47a2eb;
+            }
+
+            .button.orange:hover {
+                background: #cf5625;
+            }
+
+            .button.promo-orange:hover {
+                background: #d49711;
+            }
+
+            .button.blue:active {
+                background: #396080;
+            }
+
+            .button.green:active {
+                background: #639131;
+            }
+
+            .button.grey:active {
+                background: #878787;
+            }
+
+            .button.yellow:active {
+                background: #ab7a0b;
+            }
+
+            .button.purple:active {
+                background: #5e4075;
+            }
+
+            .button.red:active {
+                background: #ab4b49;
+            }
+
+            .button.white:active {
+                background: #fff;
+                color: #306d9e;
+            }
+
+            .button.orange:active {
+                background: #ff6a2e;
+            }
+
+            .button.promo-orange:active {
+                background: #fb0;
+            }
+
+            .button:focus {
+                outline: none;
+            }
+    </style>
+
+
+
+
+    <script src="~/Fit Brains_files/jquery.js.pagespeed.jm.tlzeXThkrZ.js"></script>
+    <script src="~/Fit Brains_files/main.js"></script>
     @*<script>eval(mod_pagespeed_3QXsL4Gq0G);</script>
 		<script>eval(mod_pagespeed_sulvGPY6KF);</script>
 		<script>eval(mod_pagespeed_x1YWuXjuB$);</script>
@@ -46,177 +264,243 @@ _kms('//i.kissmetrics.com/i.js');_kms('//doug1izaerwt3.cloudfront.net/'+_kmk+'.1
 
 
 
-<script src="~/Fit Brains_files/satelliteLib-c5109d851f57fdca6b987b89317da22d89c4c4c6.js"></script>
+    <script src="~/Fit Brains_files/satelliteLib-c5109d851f57fdca6b987b89317da22d89c4c4c6.js"></script>
 
-	
-	
-<script src="~/Fit Brains_files/satellite-5372b6b1a53a746c13000609.js"></script></head>
+
+
+    <script src="~/Fit Brains_files/satellite-5372b6b1a53a746c13000609.js"></script>
+</head>
 <body>
-	
-	<div class="debug ruler h700px">700px</div>
 
-	
-		<div class="header-container">
-			<div class="header">
-	
+    <div class="debug ruler h700px">700px</div>
 
-			
-				<div class="fitbrains-logo">
-					<a href="~/Home/index">
-						
-						<img src="~/Fit Brains_files/logo.png" alt="Fit Brains - A Rosetta Stone Company" pagespeed_url_hash="1074813615">
-					</a>
-				</div>
-			
-	
-			
-			
-	
-			
-				<div class="container">
-					<div class="navigation-links">
-						<a href="~/Home/index" class="">
-							<span>首页</span>
-						</a>
-						<a href="~/Home/ProductSoution" class="selected">
-							<span>产品和解决方案</span>
-						</a>
-						<a href="~/Home/ClientCase" class="">
-							<span>成功案例</span>
-						</a>
-                        <a href="~/Home/CooperationPartner" class="">
-							<span>合作伙伴</span>
-						</a>
-                        <a href="~/Home/AboutUs" class="">
-							<span>关于我们</span>
-						</a>
-					</div>
-				</div>
-			
-		</div>
 
-		
-		
-	</div>
+    <div class="header-container">
+        <div class="header">
 
-	
-	
 
-	<div class="page-content">
-				<div class="container">
-			
-	<div class="highlights">
-		<div class="row">
-			<div class="eight columns alpha">
-				<img src="~/Fit Brains_files/digital.png" style="width:90%;" alt="Brain Games" pagespeed_url_hash="2561766404">
-			</div>
-			<div class="eight columns omega">
-				<h2>数字家庭</h2>
-				<h3>数字家庭（IPTV）解决方案集成了数据、语音和视频等多种业务的Multi-Play，已成为电信运营商进行业务转型的主要选择，而IPTV业务则为Multi-Play提供了主要的支持。IPTV业务通过IP网络传输电视业务，能够帮助电信运营商吸引用户。同时，通过电视终端支持的IP业务使电信运营商实现了现有宽带服务从PC到电视的扩展。</h3>
-				<p>
-					
-				</p>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="dark-blue-ribbon">
-	<div class="container">
-		<div class="highlights">
-			<div class="row">
-				<div class="eight columns alpha">
-					<h2>融合通信（RCS）</h2>
-					<h3>融合通信（RCS）解决方案是一个跨通信网、互联网的综合通信及信息共享平台。用户使用真实的手机号码作为登录帐号，可以通过RCS的PC客户端、Web客户端或手机客户端与联系人进行通信，也可以上传、下载、共享图片、音乐、视频、文本等内容。RCS不但扩大了人们的社交网络，而且给人们提供了多元化的生活形态。</h3>
-					<p>
-						
-					</p>
-				</div>
-				<div class="eight columns omega">
-					<img src="~/Fit Brains_files/tele.png" style="width:90%;" alt="Personalized Training" pagespeed_url_hash="728387892">
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="container">
-	<div class="highlights">
-		<div class="row">
-			<div class="eight columns alpha">
-				<img src="~/Fit Brains_files/SDP.jpg" style="width:90%;" alt="Easy and Accessible" pagespeed_url_hash="1959194360">
-			</div>
-			<div class="eight columns omega">
-				<h2>业务交付平台（SDP）</h2>
-				<h3>锐诚业务交付平台是一个端到端的商业解决方案，支持电信、多媒体和互联网业务部署和运营，实现在移动宽带和跨行业应用等领域新的价值增长。该方案可以有效降低业务上线成本（TCO），缩短业务上市时间（TTM），加速运营商业务转型。</h3>
-				<p>
-					
-				</p>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="dark-blue-ribbon">
-	<div class="container">
-		<div class="highlights">
-			<div class="row">
-				<div class="eight columns alpha">
-					<h2>移动销售管理解决方案</h2>
-	
-					<h3>
-						自2007年以iPhone、iPad、Android手机为代表的智能手机和平板电脑面世以来，伴随着移动智能设备和3G网络的快速发展，越来越多的企业开始在移动智能终端上办公和处理业务流程。锐诚移动销售管理解决方案是在充分研究销售领域企业生产、销售、经营、渠道维护等环节的特点的基础之上，结合东软的行业服务经验和在移动智能终端上的研发实力，致力于帮助企业更方便更有效率地完成营销工作。
+
+            <div class="fitbrains-logo">
+                <a href="~/Home/index">
+
+                    <img src="~/Fit Brains_files/logo.png" alt="Fit Brains - A Rosetta Stone Company" pagespeed_url_hash="1074813615">
+                </a>
+            </div>
+
+
+
+
+
+
+            <div class="container">
+                <div class="navigation-links">
+                    <a href="~/Home/index" class="">
+                        <span>首页</span>
+                    </a>
+                    <a href="~/Home/ProductSoution" class="selected">
+                        <span>产品和解决方案</span>
+                    </a>
+                    <a href="~/Home/ClientCase" class="">
+                        <span>成功案例</span>
+                    </a>
+                    <a href="~/Home/CooperationPartner" class="">
+                        <span>合作伙伴</span>
+                    </a>
+                    <a href="~/Home/AboutUs" class="">
+                        <span>关于我们</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+    <div class="page-content">
+        <div class="container">
+
+            <div class="highlights">
+                <div class="row">
+                    <div class="eight columns alpha">
+                        <img src="~/Fit Brains_files/digitalmedical.png" style="width: 90%;" alt="Brain Games" pagespeed_url_hash="2561766404">
+                    </div>
+                    <div class="eight columns omega">
+                        <h2>智慧城市数字医疗解决方案</h2>
+                        <h3>数字医疗解决方案致力于为运营商打造个人健康管理的服务平台，为终端用户和医疗机构之间搭建起沟通的桥梁。平台的一侧整合现有的医疗资源，提供专业医疗健康服务；另一侧是终端用户，他们可灵活地通过无线或有线的方式接入，实时获得各种医疗服务。</h3>
+                       <p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dark-blue-ribbon">
+            <div class="container">
+                <div class="highlights">
+                    <div class="row">
+                        <div class="eight columns alpha">
+                            <h2>融合通信（RCS）</h2>
+                            <h3>融合通信（RCS）解决方案是一个跨通信网、互联网的综合通信及信息共享平台。用户使用真实的手机号码作为登录帐号，可以通过RCS的PC客户端、Web客户端或手机客户端与联系人进行通信，也可以上传、下载、共享图片、音乐、视频、文本等内容。RCS不但扩大了人们的社交网络，而且给人们提供了多元化的生活形态。</h3>
+                            <p>
+                            </p>
+                        </div>
+                        <div class="eight columns omega">
+                            <img src="~/Fit Brains_files/tele.png" style="width: 90%;" alt="Personalized Training" pagespeed_url_hash="728387892">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="highlights">
+                <div class="row">
+                    <div class="eight columns alpha">
+                        <img src="~/Fit Brains_files/SDP.jpg" style="width: 90%;" alt="Easy and Accessible" pagespeed_url_hash="1959194360">
+                    </div>
+                    <div class="eight columns omega">
+                        <h2>业务交付平台（SDP）</h2>
+                        <h3>锐诚业务交付平台是一个端到端的商业解决方案，支持电信、多媒体和互联网业务部署和运营，实现在移动宽带和跨行业应用等领域新的价值增长。该方案可以有效降低业务上线成本（TCO），缩短业务上市时间（TTM），加速运营商业务转型。</h3>
+                        <p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dark-blue-ribbon">
+            <div class="container">
+                <div class="highlights">
+                    <div class="row">
+                        <div class="eight columns alpha">
+                            <h2>移动销售管理解决方案</h2>
+
+                            <h3>自2007年以iPhone、iPad、Android手机为代表的智能手机和平板电脑面世以来，伴随着移动智能设备和3G网络的快速发展，越来越多的企业开始在移动智能终端上办公和处理业务流程。锐诚移动销售管理解决方案是在充分研究销售领域企业生产、销售、经营、渠道维护等环节的特点的基础之上，结合锐诚的行业服务经验和在移动智能终端上的研发实力，致力于帮助企业更方便更有效率地完成营销工作。
 					</h3>
-					<p>
-						
-					</p>
-				</div>
-				<div class="eight columns omega">
-					<img src="~/Fit Brains_files/sale.png" style="width:90%;" alt="Scientifically Backed" pagespeed_url_hash="548118938">
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="container">
+                            <p>
+                            </p>
+                        </div>
+                        <div class="eight columns omega">
+                            <img src="~/Fit Brains_files/sale.png" style="width: 90%;" alt="Scientifically Backed" pagespeed_url_hash="548118938">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="highlights">
+                <div class="row">
+                    <div class="eight columns alpha">
+                        <img src="~/Fit Brains_files/digital.png" style="width: 90%;" alt="Easy and Accessible" pagespeed_url_hash="1959194360">
+                    </div>
+                    <div class="eight columns omega">
+                        <h2>数字家庭</h2>
+                        <h3>数字家庭（IPTV）解决方案集成了数据、语音和视频等多种业务的Multi-Play，已成为电信运营商进行业务转型的主要选择，而IPTV业务则为Multi-Play提供了主要的支持。IPTV业务通过IP网络传输电视业务，能够帮助电信运营商吸引用户。同时，通过电视终端支持的IP业务使电信运营商实现了现有宽带服务从PC到电视的扩展。</h3>
+                        
+                         <p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dark-blue-ribbon">
+            <div class="container">
+                <div class="highlights">
+                    <div class="row">
+                        <div class="eight columns alpha">
+                            <h2>移动互联网解决方案</h2>
 
-					</div>
-	</div>
+                            <h3>锐诚移动互联网采用国际先进移动信息技术，整合了互联网与移动通信技术，将各类网站及企业的大量信息及各种各样的业务引入到移动互联网之中，为企业搭建了一个适合业务和管理需要的移动信息化应用平台，提供全方位、标准化、一站式的企业移动商务服务和电子商务的全新策略。 
+
+					</h3>
+                            <p>
+                            </p>
+                        </div>
+                        <div class="eight columns omega">
+                            <img src="~/Fit Brains_files/mobile2.png" style="width: 90%;" alt="Scientifically Backed" pagespeed_url_hash="548118938">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="highlights">
+                <div class="row">
+                    <div class="eight columns alpha">
+                        <img src="~/Fit Brains_files/Cloud2.png" style="width: 90%;" alt="Easy and Accessible" pagespeed_url_hash="1959194360">
+                    </div>
+                    <div class="eight columns omega">
+                        <h2>云计算解决方案</h2>
+                        <h3>锐诚电信云计算解决方案由私有云和公有云解决方案两部分组成，涵盖了IT基础设施、集成服务和管理服务。私有云解决方案帮助运营商实现数据中心的新建与整合，上层电信IT系统的云化迁移，以及内部办公及信息系统的构建，大幅降低IT建设和运维成本；并通过提供政府云与行业云一站式ICT服务解决方案，帮助运营商获取新的市场机会。公有云解决方案帮助运营商搭建公用的云平台，营造生态系统，有利于运营商整体收入的增加，以及产业主导力的提升。</h3>
+                        <p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dark-blue-ribbon">
+            <div class="container">
+                <div class="highlights">
+                    <div class="row">
+                        <div class="eight columns alpha">
+                            <h2>三网融合业务和数据解决方案</h2>
+
+                            <h3>锐诚电信MX-300综合控制平台以其强大的运维保障能力，能够对全程全网的设备提供统一的管理和运维支撑，使现网设备真正实现零配置，设备即插即用、自动升级，对设备运行状态实时监控。MX-300综合控制平台能够为用户提供多元化套餐选择，业务发展便捷灵活，完全融合广电、电信运营商目前的全业务服务，可为用户同时提供基础通信业务、数据业务、移动业务、广播电视业务、新型融合业务等。
+					</h3>
+                            <p>
+                            </p>
+                        </div>
+                        <div class="eight columns omega">
+                            <img src="~/Fit Brains_files/data.png" style="width: 90%;" alt="Scientifically Backed" pagespeed_url_hash="548118938">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+        </div>
+    </div>
+
+    <div class="footer">
+
+        <div class="blue-ribbon">
+            &nbsp&nbsp&nbsp&nbsp	锐诚软件   值得信赖的国际化IT服务提供商
 	
-	<div class="footer">
-		
-	<div class="blue-ribbon">
-		&nbsp&nbsp&nbsp&nbsp	锐诚软件   值得信赖的国际化IT服务提供商
-		@*<a href="http://www.fitbrains.com/signup" class="rounded red button wide">Start Training</a>*@
-	</div>
+            @*<a href="http://www.fitbrains.com/signup" class="rounded red button wide">Start Training</a>*@
+        </div>
 
-		<div class="content">
-			
-				<div class="container">
-					<div class="row">
-						<div class="four columns alpha">
-							
-							<img class="logo" src="~/Fit Brains_files/logo.png" alt="Fit Brains by Rosetta Stone" pagespeed_url_hash="1074813615">
-						</div>
-						<div class="six columns">
-							
-								<div class="links">
-									<a href="~/Home/index">
-										<span>首页</span>
-									</a>
-									<a href="~/Home/ProductSoution">
-										<span>产品和解决方案</span>
-									</a>
-									<a href="~/Home/ClientCase">
-										<span>成功案例</span>
-									</a>
-									<a href="~/Home/CooperationPartner">
-										<span>合作伙伴</span>
-									</a>
-									<a href="~/Home/AboutUs">
-										<span>关于我们</span>
-									</a>
-								</div>
-							
-						</div>
-						@*<div class="six columns omega">
+        <div class="content">
+
+            <div class="container">
+                <div class="row">
+                    <div class="four columns alpha">
+
+                        <img class="logo" src="~/Fit Brains_files/logo.png" alt="Fit Brains by Rosetta Stone" pagespeed_url_hash="1074813615">
+                    </div>
+                    <div class="six columns">
+
+                        <div class="links">
+                            <a href="~/Home/index">
+                                <span>首页</span>
+                            </a>
+                            <a href="~/Home/ProductSoution">
+                                <span>产品和解决方案</span>
+                            </a>
+                            <a href="~/Home/ClientCase">
+                                <span>成功案例</span>
+                            </a>
+                            <a href="~/Home/CooperationPartner">
+                                <span>合作伙伴</span>
+                            </a>
+                            <a href="~/Home/AboutUs">
+                                <span>关于我们</span>
+                            </a>
+                        </div>
+
+                    </div>
+                    @*<div class="six columns omega">
 							<div class="newsletter">
 								<h4>Subscribe to our newsletter</h4>
 								<form method="post">
@@ -224,35 +508,38 @@ _kms('//i.kissmetrics.com/i.js');_kms('//doug1izaerwt3.cloudfront.net/'+_kmk+'.1
 								</form>
 							</div>
 						</div>*@
-					</div>
-				</div>
-			
-			
-				<div class="bottom">
-					<div class="container">
-						<span>Copyright © - 2014 Rosetta Stone Inc.</span>
-						<div class="social">
-							<span>Follow Us</span>
-							<a href="https://www.facebook.com/FitBrainsCommunity" target="_blank"><img src="~/Fit Brains_files/xfb.png.pagespeed.ic.OhWELchm9A.png" alt="Facebook" pagespeed_url_hash="3017415368"></a>
-							<a href="https://twitter.com/fitbrains" target="_blank"><img src="~/Fit Brains_files/xtwitter.png.pagespeed.ic.mQVoYiFbUj.png" alt="Twitter" pagespeed_url_hash="1498011449"></a>
-							<!--
+                </div>
+            </div>
+
+
+            <div class="bottom">
+                <div class="container">
+                    <span>版权所有 © 2008-2014 锐诚科技有限公司</span>
+                    <div class="social">
+                        <span>关注我们</span>
+                        <a href="" target="_blank">
+                            <img src="~/Fit Brains_files/xfb.png.pagespeed.ic.OhWELchm9A.png" alt="Facebook" pagespeed_url_hash="3017415368"></a>
+                        <a href="" target="_blank">
+                            <img src="~/Fit Brains_files/xtwitter.png.pagespeed.ic.mQVoYiFbUj.png" alt="Twitter" pagespeed_url_hash="1498011449"></a>
+                        <!--
 							<img src="/i/icon/gplus.png">
 							<img src="/i/icon/rss.png">
 							-->
-						</div>
-					</div>
-				</div>
-			
-		</div>
-	</div>
+                    </div>
+                </div>
+            </div>
 
-	@*<div id="modal_overlay_iframe_container" style="display:none;" onclick="ModalOverlay.hide()"></div>
+        </div>
+    </div>
+
+    @*<div id="modal_overlay_iframe_container" style="display:none;" onclick="ModalOverlay.hide()"></div>
 	<div id="modal_overlay_mask" class="dark" style="display:none;" onclick="ModalOverlay.hide()"></div>
 
 	<script type="text/javascript">_satellite.pageBottom();</script>*@
 
-@*<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-2.newrelic.com","licenseKey":"cd7d39dfa5","applicationID":"3746196","transactionName":"blFVZEcAWxAFWhFdW1cbYkJcTkILHRQDXUBbRlZZWxIaCgpdAEwaSVxH","queueTime":0,"applicationTime":218,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-411.min.js"}</script><script pagespeed_no_defer="">//<![CDATA[
+    @*<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-2.newrelic.com","licenseKey":"cd7d39dfa5","applicationID":"3746196","transactionName":"blFVZEcAWxAFWhFdW1cbYkJcTkILHRQDXUBbRlZZWxIaCgpdAEwaSVxH","queueTime":0,"applicationTime":218,"ttGuid":"","agentToken":"","userAttributes":"","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-411.min.js"}</script><script pagespeed_no_defer="">//<![CDATA[
 (function(){var e=encodeURIComponent,f=window,h=document,m="width",n="documentElement",p="height",q="length",r="prototype",s="body",t="&",u="&ci=",w="&n=",x="&rd=",y=",",z="?",A="Content-Type",B="Microsoft.XMLHTTP",C="Msxml2.XMLHTTP",D="POST",E="application/x-www-form-urlencoded",F="img",G="input",H="load",I="oh=",J="on",K="pagespeed_url_hash",L="url=",M=function(a,c,d){if(a.addEventListener)a.addEventListener(c,d,!1);else if(a.attachEvent)a.attachEvent(J+c,d);else{var b=a[J+c];a[J+c]=function(){d.call(this);b&&b.call(this)}}};f.pagespeed=f.pagespeed||{};var N=f.pagespeed,O=function(a,c,d,b,g){this.d=a;this.f=c;this.g=d;this.a=g;this.c={height:f.innerHeight||h[n].clientHeight||h[s].clientHeight,width:f.innerWidth||h[n].clientWidth||h[s].clientWidth};this.e=b;this.b={}};O[r].j=function(a){a=a.getBoundingClientRect();return{top:a.top+(void 0!==f.pageYOffset?f.pageYOffset:(h[n]||h[s].parentNode||h[s]).scrollTop),left:a.left+(void 0!==f.pageXOffset?f.pageXOffset:(h[n]||h[s].parentNode||h[s]).scrollLeft)}};O[r].i=function(a){if(0>=a.offsetWidth&&0>=a.offsetHeight)return!1;a=this.j(a);var c=a.top.toString()+y+a.left.toString();if(this.b.hasOwnProperty(c))return!1;this.b[c]=!0;return a.top<=this.c[p]&&a.left<=this.c[m]};O[r].l=function(){for(var a=[F,G],c=[],d={},b=0;b<a[q];++b)for(var g=h.getElementsByTagName(a[b]),k=0;k<g[q];++k){var v=g[k].getAttribute(K);v&&g[k].getBoundingClientRect&&this.i(g[k])&&!(v in d)&&(c.push(v),d[v]=!0)}b=!1;a=I+this.g;this.a&&(a+=w+this.a);if(0!=c[q]){a+=u+e(c[0]);for(b=1;b<c[q];++b){d=y+e(c[b]);if(131072<a[q]+d[q])break;a+=d}b=!0}this.e&&(d=x+e(JSON.stringify(this.h())),131072>=a[q]+d[q]&&(a+=d),b=!0);N.criticalImagesBeaconData=a;if(b){var c=this.d,b=this.f,l;if(f.XMLHttpRequest)l=new XMLHttpRequest;else if(f.ActiveXObject)try{l=new ActiveXObject(C)}catch(P){try{l=new ActiveXObject(B)}catch(Q){}}l&&(l.open(D,c+(-1==c.indexOf(z)?z:t)+L+e(b)),l.setRequestHeader(A,E),l.send(a))}};O[r].h=function(){for(var a={},c=h.getElementsByTagName(F),d=0;d<c[q];++d){var b=c[d],g=b.getAttribute(K);if("undefined"==typeof b.naturalWidth||"undefined"==typeof b.naturalHeight||"undefined"==typeof g)break;if("undefined"==typeof a[b.src]&&0<b[m]&&0<b[p]&&0<b.naturalWidth&&0<b.naturalHeight||"undefined"!=typeof a[b.src]&&b[m]>=a[b.src].n&&b[p]>=a[b.src].m)a[g]={renderedWidth:b[m],renderedHeight:b[p],originalWidth:b.naturalWidth,originalHeight:b.naturalHeight}}return a};N.k=function(a,c,d,b,g){var k=new O(a,c,d,b,g);M(f,H,function(){f.setTimeout(function(){k.l()},0)})};N.criticalImagesBeaconInit=N.k;})();pagespeed.criticalImagesBeaconInit('/mod_pagespeed_beacon','http://www.fitbrains.com/why-fitbrains/','fQn24GX_65',false,'qZweig6seeM');
 //]]></script>*@
 
-</body></html>
+</body>
+</html>
