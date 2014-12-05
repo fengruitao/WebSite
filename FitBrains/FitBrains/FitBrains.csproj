@@ -183,6 +183,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Css\CooperationPartner.css" />
     <Content Include="Fit Brains_files\amgdgt.js" />
     <Content Include="Fit Brains_files\analytics.js" />
     <Content Include="Fit Brains_files\Architect.png" />
@@ -238,6 +239,12 @@
     <None Include="Properties\PublishProfiles\ruicheng - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\ruicheng - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Images\link.png" />
+    <Content Include="Images\wxcustom.png" />
+    <Content Include="Images\wxcustomers.png" />
+    <Content Include="Images\wxgift.png" />
+    <Content Include="Images\wxshop.png" />
+    <Content Include="Images\wxweb.png" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
