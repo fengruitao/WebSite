@@ -1013,7 +1013,7 @@ input, select, option {
         }
 
         .header-container.home .window p {
-            font-size: 24px;
+            font-size: 18px;
             color: #fff;
         }
 
@@ -1472,6 +1472,10 @@ input, select, option {
             font-size: 22px;
             color: #666;
             margin-top: 10px;
+        }
+
+        .homepage .users .list div blockquote.blockquote {
+            text-align:left;
         }
 
 .formpage {

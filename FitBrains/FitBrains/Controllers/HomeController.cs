@@ -11,6 +11,33 @@ namespace FitBrains.Controllers
         #region 页面加载
 
         /// <summary>
+        /// CloudsMoreInformation页面加载
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult CloudsMoreInformation()
+        {
+            return View();
+        }
+
+        /// <summary>
+        /// WeiXinMoreInformation页面加载
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult WeiXinMoreInformation()
+        {
+            return View();
+        }
+
+        /// <summary>
+        /// M2MMoreInformation页面加载
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult M2MMoreInformation()
+        {
+            return View();
+        }
+
+        /// <summary>
         /// CooperationPartner页面加载
         /// </summary>
         /// <returns></returns>

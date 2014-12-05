@@ -184,13 +184,29 @@
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Css\CooperationPartner.css" />
+    <Content Include="Fit Brains_files\2.png" />
+    <Content Include="Fit Brains_files\3.png" />
+    <Content Include="Fit Brains_files\4.png" />
+    <Content Include="Fit Brains_files\5.png" />
+    <Content Include="Fit Brains_files\6.png" />
     <Content Include="Fit Brains_files\amgdgt.js" />
     <Content Include="Fit Brains_files\analytics.js" />
     <Content Include="Fit Brains_files\Architect.png" />
+    <Content Include="Fit Brains_files\bg3.jpg" />
     <Content Include="Fit Brains_files\cf2786ed157c305a8f1daa858adcd15ce7bfdf60.1.js" />
+    <Content Include="Fit Brains_files\city.png" />
     <Content Include="Fit Brains_files\cloud.png" />
+    <Content Include="Fit Brains_files\cloud2.png" />
+    <Content Include="Fit Brains_files\CP.jpg" />
+    <Content Include="Fit Brains_files\CP1.png" />
+    <Content Include="Fit Brains_files\CP2.jpg" />
+    <Content Include="Fit Brains_files\data.png" />
+    <Content Include="Fit Brains_files\digcity.png" />
     <Content Include="Fit Brains_files\digital.png" />
+    <Content Include="Fit Brains_files\digitalmedical.png" />
     <Content Include="Fit Brains_files\fbds.js" />
+    <Content Include="Fit Brains_files\home.jpg" />
+    <Content Include="Fit Brains_files\home2.jpg" />
     <Content Include="Fit Brains_files\huada.png" />
     <Content Include="Fit Brains_files\i.js" />
     <Content Include="Fit Brains_files\jiankong.png" />
@@ -198,7 +214,12 @@
     <Content Include="Fit Brains_files\logo.png" />
     <Content Include="Fit Brains_files\main.css" />
     <Content Include="Fit Brains_files\main.js" />
+    <Content Include="Fit Brains_files\mobile2.png" />
     <Content Include="Fit Brains_files\moss.jpg" />
+    <Content Include="Fit Brains_files\pic1.png" />
+    <Content Include="Fit Brains_files\pic2.png" />
+    <Content Include="Fit Brains_files\pic3.png" />
+    <Content Include="Fit Brains_files\pic4.png" />
     <Content Include="Fit Brains_files\PM.png" />
     <Content Include="Fit Brains_files\sale.png" />
     <Content Include="Fit Brains_files\satellite-5372b6b1a53a746c13000609.js" />
@@ -209,6 +230,7 @@
     <Content Include="Fit Brains_files\shoutu.jpg" />
     <Content Include="Fit Brains_files\tele.png" />
     <Content Include="Fit Brains_files\weixin.png" />
+    <Content Include="Fit Brains_files\women.png" />
     <Content Include="Fit Brains_files\wulianwang.png" />
     <Content Include="Fit Brains_files\xbest_health.png.pagespeed.ic.r9H827Yzpb.png" />
     <Content Include="Fit Brains_files\xfb.png.pagespeed.ic.OhWELchm9A.png" />
@@ -281,6 +303,9 @@
     <Content Include="Views\Home\ClientCase.cshtml" />
     <Content Include="Views\Home\CooperationPartner.cshtml" />
     <Content Include="Views\Home\AboutUs.cshtml" />
+    <Content Include="Views\Home\WeiXinMoreInformation.cshtml" />
+    <Content Include="Views\Home\CloudsMoreInformation.cshtml" />
+    <Content Include="Views\Home\M2MMoreInformation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
