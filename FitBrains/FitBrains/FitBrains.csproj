@@ -200,7 +200,9 @@
     <Content Include="Fit Brains_files\CP.jpg" />
     <Content Include="Fit Brains_files\CP1.png" />
     <Content Include="Fit Brains_files\CP2.jpg" />
+    <Content Include="Fit Brains_files\cp3.png" />
     <Content Include="Fit Brains_files\data.png" />
+    <Content Include="Fit Brains_files\design.png" />
     <Content Include="Fit Brains_files\digcity.png" />
     <Content Include="Fit Brains_files\digital.png" />
     <Content Include="Fit Brains_files\digitalmedical.png" />
@@ -221,6 +223,7 @@
     <Content Include="Fit Brains_files\pic3.png" />
     <Content Include="Fit Brains_files\pic4.png" />
     <Content Include="Fit Brains_files\PM.png" />
+    <Content Include="Fit Brains_files\PM1.png" />
     <Content Include="Fit Brains_files\sale.png" />
     <Content Include="Fit Brains_files\satellite-5372b6b1a53a746c13000609.js" />
     <Content Include="Fit Brains_files\satelliteLib-c5109d851f57fdca6b987b89317da22d89c4c4c6.js" />
@@ -258,7 +261,9 @@
     <Content Include="Fit Brains_files\pixel" />
     <Content Include="Fit Brains_files\saved_resource" />
     <Content Include="Fit Brains_files\spp.pl" />
+    <None Include="Properties\PublishProfiles\ruicheng - FTP %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\ruicheng - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\ruicheng - Web Deploy %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\ruicheng - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Images\link.png" />

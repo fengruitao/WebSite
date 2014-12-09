@@ -6,6 +6,8 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA+l4+teq9Q0y3+TF2Sc3tpwAAAAACAAAAAAAQZgAAAAEAACAAAADDF/uJh2k51DesYkneV+7Q+lfgn+vS73NcJQ0YDJd4ygAAAAAOgAAAAAIAACAAAABWTWtqlJ0kFNnkI4wwwxVU8rItRd3Fuu7r9OZg/l8Z24AAAAApIr/Lz4WLl7khK6vrQjlA+PsojToIwps44ffD5LEYGZ1bI1aq/xn1Iul/avu2dNxrWTIKIa6ShP+GKgXJVhrGTqYGv9JipqfRgUFaz1PIEpT2hwGHSFrBpDf3JrwY0eoKhn0JmBAtwdzWt7jWKCUdrvB1n8ol+0/Yz/5iaVXV2UAAAACHafJks4+7AkOh3vIL0ORi81Q8AGFHknBYmSyicjUI65imKexR8W0Tp2BEqZJE4l0YoiK6NgHJO4xfIDllXsko</EncryptedPassword>
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAnTQncYSOd0+x9vzq+04UfAAAAAACAAAAAAADZgAAwAAAABAAAAB+q61hWlAsdLBWLOtjPk2BAAAAAASAAACgAAAAEAAAALWg8D0O3Cqx7UTt3AAf4eEYAAAAW4T9Zsk/Pl0OpfLED6fuKGtPLlTs2qpJFAAAACmuwvmGvDfcrwZ0SSbo1P6PvBMa</EncryptedPassword>
+    <LastUsedBuildConfiguration />
+    <LastUsedPlatform />
   </PropertyGroup>
 </Project>
